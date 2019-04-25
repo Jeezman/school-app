@@ -1,0 +1,14 @@
+stages:
+  - test
+  - build
+  - deploy
+
+Test Frontend Application:
+  stage: test
+  image: node:8
+  script:
+    - npm install
+    - export NODE_ENV=development
+    - npm run test
+    - npm run lint
+    
